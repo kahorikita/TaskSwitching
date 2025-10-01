@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "Code for: Switching between newly learned motor skills"
+authors:
+  - family-names: Kita
+    given-names: Kahori
+date-released: 2025-10-01
+url: https://github.com/kahorikita/TaskSwitching
