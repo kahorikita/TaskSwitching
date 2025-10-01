@@ -1,17 +1,15 @@
-# --- OS / Editor ---
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-.vscode/
-.idea/
+# まず全て無視
+*
 
-# --- MATLAB ---
-*.asv        
-*.m~         
-*.mex*       
-*.matlabworkspace
-*.mcrCache/
+# ただし次は追跡する
+!/.gitignore
+!/README.md
+!/LICENSE
+!/CITATION.cff
 
-*.mat
-!data/sample/*.mat
+# フォルダを使う場合はフォルダ自体の無視を解除してから個別ファイルを許可
+!/plot_Exp1Exp2.m
+!/plot_Exp3.m
+!/savgolayFilt.m
+!/shadedErrorBar.m
+!/sliding_window.m
