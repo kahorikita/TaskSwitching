@@ -1,0 +1,17 @@
+# --- OS / Editor ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# --- MATLAB ---
+*.asv        
+*.m~         
+*.mex*       
+*.matlabworkspace
+*.mcrCache/
+
+*.mat
+!data/sample/*.mat
