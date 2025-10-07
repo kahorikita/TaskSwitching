@@ -1,8 +1,22 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it."
-title: "Code for: Switching between newly learned motor skills"
+title: "TaskSwitching: MATLAB analysis and plotting code"
 authors:
   - family-names: Kita
     given-names: Kahori
-date-released: 2025-10-01
+repository-code: https://github.com/kahorikita/TaskSwitching
 url: https://github.com/kahorikita/TaskSwitching
+version: v1.0.0
+date-released: 2025-10-07
+doi: 10.5281/zenodo.17288627           
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.17288395
+# preferred-citation:  # 論文が出たらここに論文の書誌情報を追記
+#   type: article
+#   title: "<Paper title>"
+#   authors:
+#     - family-names: Kita
+#       given-names: Kahori
+#   year: 2025
+#   doi: 10.xxxx/xxxxx
