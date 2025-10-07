@@ -1,12 +1,12 @@
 %% Choice of experiment you want to plot
 
 clear; clc
-expID = 2; % 1:Exp 1, 2:Exp 2
+expID = 1; % 1:Exp 1, 2:Exp 2
 
 %% Exp 1 (training)
 
 if expID == 1
-    load Exp1_Training.mat
+    load Exp1_Training_slim.mat
 
     numofsub = 25;
     numofday = 4;

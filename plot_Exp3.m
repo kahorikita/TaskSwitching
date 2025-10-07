@@ -30,7 +30,7 @@ col = [192/255,192/255,192/255];
 
 %% ===== Day 1-4, 6-9 =====
 
-load Exp3_Training.mat
+load Exp3_Training_slim.mat
 
 % --- Plot ranges ---
 rng1 = {1:10, 12:21, 23:32, 34:43};       % DEA
@@ -79,14 +79,14 @@ ttest(tempA,tempB,2,'paired')
 
 % Mapping: day | fileName | startsub | rng1 | rng2
 dayMap = {
-  5,  'Exp3_Day5ADay10B.mat',        1,  46:48,       [];
-  6,  'Exp3_Day6ADay10B.mat',  1,  78:80,       125:127;
- 10,  'Exp3_Day6ADay10B.mat',  1,  78:80,       125:127;
- 11, 'Exp3_Day11.mat',         3,  1:3,         5:7;
- 12, 'Exp3_Day12.mat',         1,  [1:3,7:9],   [4:6,10:12];
- 13, 'Exp3_Day13.mat',         1,  1:2:11,      2:2:12;
- 14, 'Exp3_Day14.mat',         1,  [1:3,7:9],   [4:6,10:12];
- 15, 'Exp3_Day15.mat',         1,  1:2:11,      2:2:12
+  5, 'Exp3_Day5ADay10B_slim.mat',        1,  46:48,       [];
+  6, 'Exp3_Day6ADay10B_slim.mat',  1,  78:80,       125:127;
+ 10, 'Exp3_Day6ADay10B_slim.mat',  1,  78:80,       125:127;
+ 11, 'Exp3_Day11_slim.mat',         3,  1:3,         5:7;
+ 12, 'Exp3_Day12_slim.mat',         1,  [1:3,7:9],   [4:6,10:12];
+ 13, 'Exp3_Day13_slim.mat',         1,  1:2:11,      2:2:12;
+ 14, 'Exp3_Day14_slim.mat',         1,  [1:3,7:9],   [4:6,10:12];
+ 15, 'Exp3_Day15_slim.mat',         1,  1:2:11,      2:2:12
 };
 
 for day = 5:15
@@ -200,7 +200,7 @@ load Exp3_Switch.mat
 SW = dAll_Exp3_SW;
 
 % --- Steady State Map A, B ---
-load Exp3_Day5ADay10B.mat % 1: DEA on Day5, 2: DEB on Day 10 
+load Exp3_Day5ADay10B_slim.mat % 1: DEA on Day5, 2: DEB on Day 10 
 SSA = arrayfun(@(s) nanmean(abs(dco{s,1}.initDir)), 1:7);
 SSB = arrayfun(@(s) nanmean(abs(dco{s,2}.initDir)), 1:7);
 SSA_B = arrayfun(@(s) nanmean(abs(dco{s,1}.initDir_DEB)), 1:7);
@@ -223,7 +223,7 @@ dayMap = {
 };
 
 % Chose data for map *********
-SSchoice = 0; % 0: Day 5/10(co-task under BA/DE), 1: Day 16(> 6 trials post switch)
+SSchoice = 1; % 0: Day 5/10(co-task under BA/DE), 1: Day 16(> 6 trials post switch)
 
 for day = [11, 16, 17]
 
@@ -601,7 +601,7 @@ function [targAng, initDir] = load_steady_maps(sub, SW, SSchoice, trialAfterSW, 
 
     switch SSchoice
         case {0} % Day 5/10 for map
-            load Exp3_Day5ADay10B.mat
+            load Exp3_Day5ADay10B_slim.mat
             for sw = 1:2
                 for tr = 1:trialAfterSW
                     targAng{tr}{sw} = dco{sub,sw}.targAng;
